@@ -1,0 +1,9 @@
+c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\bin\Debug\TextToDiary.exe.config
+c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\bin\Debug\TextToDiary.exe
+c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\bin\Debug\TextToDiary.pdb
+c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\obj\Debug\TextToDiary.csprojResolveAssemblyReference.cache
+c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\obj\Debug\TextToDiary.Properties.Resources.resources
+c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\obj\Debug\TextToDiary.csproj.GenerateResource.Cache
+c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\obj\Debug\TextToDiary.exe
+c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\obj\Debug\TextToDiary.pdb
+c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\obj\Debug\TextToDiary.Main.resources
