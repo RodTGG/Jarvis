@@ -1,0 +1,26 @@
+[
+  {
+    "name": "facebook",
+    "url": "https://facebook.com"
+  },
+  {
+    "name": "twitch",
+    "url": "https://twitch.com"
+  },
+  {
+    "name": "youtube",
+    "url": "https://youtube.com"
+  },
+  {
+    "name": "plex",
+    "url": "https://plex.tv/web"
+  },
+  {
+    "name": "netflix",
+    "url": "https://netflix.com"
+  },
+  {
+    "name": "reddit",
+    "url": "https://reddit.com"
+  }
+]

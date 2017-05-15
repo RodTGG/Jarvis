@@ -11,7 +11,6 @@ using System.Speech.Recognition;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
-using Newtonsoft.Json;
 
 namespace TextToDiary
 {
@@ -19,7 +18,7 @@ namespace TextToDiary
     {
 
         SpeechRecognitionEngine mySRE = new SpeechRecognitionEngine();
-        string[,] lSites;
+        string[] lSites;
         string[] lCommands = { "exit", "new tab", "stop", "jarvis" };
         private System.Windows.Forms.ContextMenu contextMenu1;
         private System.Windows.Forms.MenuItem menuItem1;
@@ -86,15 +85,15 @@ namespace TextToDiary
                             break;
                     }
 
-                    for (int i = 0; i < lSites.GetLength(0); i++)
+                    if (e.Result.Text == "plex")
                     {
-                        if (lSites[i, 0] == e.Result.Text)
-                        {
-                            Process.Start("chrome", lSites[i, 1]);
-                            break;
-                        }
-                    }
+                        Process.Start("chrome", "http://192.168.1.201:32400/web/index.html");
 
+                    }
+                    else if (lSites.Contains(e.Result.Text))
+                    {
+                        Process.Start("chrome", "http://www." + e.Result.Text + ".com");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -169,7 +168,7 @@ namespace TextToDiary
         private void LoadFile()
         {
             DialogResult msgBoxResult;
-            string path = "websites.json";
+            string path = "websites.txt";
 
             if (!File.Exists(path))
             {
@@ -183,12 +182,7 @@ namespace TextToDiary
                 {
                     using (StreamWriter sw = File.CreateText(path))
                     {
-                        string lSites = "[\n{\n'name':'facebook',\n'url':'https://facebook.com'\n},";
-                        lSites = lSites + "\n{\n'name':'twitch',\n'url': 'https://twitch.com'\n},";
-                        lSites = lSites + "\n{\n'name': 'youtube',\n'url': 'https://youtube.com'\n},";
-                        lSites = lSites + "\n{\n'name': 'plex',\n'url': 'https://plex.tv/web'\n},";
-                        lSites = lSites + "\n{\n'name': 'netflix',\n'url': 'https://netflix.com'\n},";
-                        lSites = lSites + "\n{\n'name': 'reddit',\n'url': 'https://reddit.com'\n}\n]";
+                        string lSites = "facebook\ntwitch\nyoutube\nplex\nnetflix\nreddit";
                         sw.Write(lSites);
                     }
                 }
@@ -196,13 +190,19 @@ namespace TextToDiary
 
             using (StreamReader sr = File.OpenText(path))
             {
-                string json = sr.ReadToEnd();
-                List<Item> items = JsonConvert.DeserializeObject<List<Item>>(json);
-                lSites = new string[items.Count, items.Count];
-                for (int i = 0; i < items.Count; i++)
+                string sLine = "";
+                List<string> temp = new List<string>();
+
+                for (int i = 0; (sLine = sr.ReadLine()) != null; i++)
                 {
-                    this.lSites[i,0] = items[i].name;
-                    this.lSites[i,1] = items[i].url;
+                    temp.Add(sLine);
+                }
+
+                lSites = new string[temp.Count];
+
+                for (int i = 0; i < temp.Count; i++)
+                {
+                    lSites[i] = temp[i];
                 }
             }
 
@@ -213,17 +213,18 @@ namespace TextToDiary
         {
             List<string> tempCommand = new List<string>();
 
+
             for (int i = 0; i < lCommands.Length; i++)
             {
                 tempCommand.Add(lCommands[i]);
             }
 
-            for (int i = 0; i < lSites.GetLength(0); i++)
+            for (int i = 0; i < lSites.Length; i++)
             {
-                tempCommand.Add(lSites[i,0]);
+                tempCommand.Add(lSites[i]);
             }
 
-            lCommands = new string[lCommands.Length + lSites.GetLength(0)];
+            lCommands = new string[lCommands.Length + lSites.Length];
             for (int i = 0; i < tempCommand.Count; i++)
             {
                 lCommands[i] = tempCommand[i];

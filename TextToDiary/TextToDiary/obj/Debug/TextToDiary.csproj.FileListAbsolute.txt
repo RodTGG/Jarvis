@@ -7,3 +7,14 @@ c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\o
 c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\obj\Debug\TextToDiary.exe
 c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\obj\Debug\TextToDiary.pdb
 c:\users\rodrigo\documents\visual studio 2015\Projects\TextToDiary\TextToDiary\obj\Debug\TextToDiary.Main.resources
+C:\Users\Peter\Documents\GitHub\Jarvis\TextToDiary\TextToDiary\bin\Debug\TextToDiary.exe.config
+C:\Users\Peter\Documents\GitHub\Jarvis\TextToDiary\TextToDiary\obj\Debug\TextToDiary.exe
+C:\Users\Peter\Documents\GitHub\Jarvis\TextToDiary\TextToDiary\obj\Debug\TextToDiary.pdb
+C:\Users\Peter\Documents\GitHub\Jarvis\TextToDiary\TextToDiary\bin\Debug\TextToDiary.exe
+C:\Users\Peter\Documents\GitHub\Jarvis\TextToDiary\TextToDiary\bin\Debug\TextToDiary.pdb
+C:\Users\Peter\Documents\GitHub\Jarvis\TextToDiary\TextToDiary\obj\Debug\TextToDiary.Main.resources
+C:\Users\Peter\Documents\GitHub\Jarvis\TextToDiary\TextToDiary\obj\Debug\TextToDiary.Properties.Resources.resources
+C:\Users\Peter\Documents\GitHub\Jarvis\TextToDiary\TextToDiary\obj\Debug\TextToDiary.csproj.GenerateResource.Cache
+C:\Users\Peter\Documents\GitHub\Jarvis\TextToDiary\TextToDiary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Peter\Documents\GitHub\Jarvis\TextToDiary\TextToDiary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Peter\Documents\GitHub\Jarvis\TextToDiary\TextToDiary\obj\Debug\TextToDiary.csprojResolveAssemblyReference.cache
